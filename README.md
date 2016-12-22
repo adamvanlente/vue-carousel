@@ -1,6 +1,5 @@
-# Carousel for B12 coding challenge
+# Vue Carousel Component
 
-> Carousel challenge from B12
 
 In this project you'll find a basic [Vue.js](https://vuejs.org/) component called Carousel, which accepts an array of image urls.
 
@@ -14,7 +13,7 @@ Navigate to `./dist/` in your terminal, then run a webserver for this directory 
 
 If you want to run the project in a dev environment, follow the instructions for building at the bottom of this document.
 
-
+You can also find the component running here: [http://adamvanlente.com/carousel/](http://adamvanlente.com/carousel/).
 
 ## Tools used
 
@@ -26,27 +25,10 @@ If you want to run the project in a dev environment, follow the instructions for
 * Didn't put much into making it responsive for mobile.
 * Didn't include a swipe library
 
-## Requirements for project
-
-* Use JS (ES2015 preferred)
-* Modern framework (React, Angular)
-* Be sure to explain expected data structure
-* Use of build tools encouraged
-* Include HTML/CSS needed for working example
-* Include an HTML file at the root of project
-
-## Properties of the Carousel
-
-* For a given webpage, you can embed some JavaScript on that page and several images will display one after the other
-* Left and right buttons let you advance through images.
-* Indication of which image you are viewing, in context of full list
-* (some carousels advance automatically)
-
 ## Data structure
 
 Expected data structure for images is as follows:
 
-    // Array with max length of 10 items
     [
       "imageUrl",
       "imageUrl",
@@ -57,6 +39,10 @@ Expected data structure for images is as follows:
 ## Build this project
 
 ``` bash
+
+git clone git@github.com:adamvanlente/vue-carousel.git
+cd vue-carousel
+
 # Prereq
 npm install -g vue-cli
 
