@@ -110,17 +110,16 @@
        *
        */
       navigateLeft() {
-        this.currentImageIndex -= 1;
-        this.setCarouselPosition();
+        this.navigateToSlide(this.currentImageIndex -= 1);
       },
 
       navigateRight() {
-        this.currentImageIndex += 1;
-        this.setCarouselPosition();
+        this.navigateToSlide(this.currentImageIndex += 1);
       },
 
       navigateToSlide(index) {
         this.currentImageIndex = index;
+        this.validateImageIndex();
         this.setCarouselPosition();
       },
 
