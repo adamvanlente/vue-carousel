@@ -1,7 +1,7 @@
 {
   "name": "b12-carousel",
   "version": "1.0.0",
-  "description": "Carousel challenge from B12",
+  "description": "View Carousel Component",
   "author": "Adam VanLente",
   "private": true,
   "scripts": {
