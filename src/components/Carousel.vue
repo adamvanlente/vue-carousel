@@ -49,11 +49,19 @@
 
         // Max number of images in carousel, whether random or user assinged.
         arrayMaxImages: 7,
+
+        // Number of seconds between automated carousel nav.
+        secondsBetweenSlides: 5,
       };
     },
     mounted() {
       // Set position on window resize to avoid odd appearance.
       window.addEventListener('resize', this.setCarouselPosition);
+
+      // Update the carousel at regular intervals.
+      window.setInterval(() => {
+        this.navigateRight();
+      }, this.secondsBetweenSlides * 1000);
     },
     computed: {
       imageArray() {
