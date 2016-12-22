@@ -132,12 +132,16 @@
 
       // Set carousel to correct position.
       setCarouselPosition() {
-        this.validateImageIndex();
         const width = this.getCarouselWidth();
         const content = window.document.getElementById('carousel-content');
         const newLeftMargin = this.currentImageIndex * width;
-        content.style.marginLeft = `-${newLeftMargin}px`;
+        content.style.transform = `translate(-${newLeftMargin}px, 0)`;
       },
+
+      /*
+       * Utils
+       *
+       */
 
       // Get the width of the current carousel unit.
       getCarouselWidth() {
@@ -149,7 +153,7 @@
       // Create and return a random int between floor and ceiling.
       randomInt(floor, ceiling) {
         const diff = ceiling - floor;
-        return Math.floor(Math.random() * diff) + floor;
+        return Math.floor(Math.random() * diff) + floor + 1;
       },
     },
   };
@@ -188,7 +192,8 @@
   }
 
   .carousel-content {
-    display: inline;
+    display: block;
+    position: inherit;
     @extend .img-transition;
 
     img {
